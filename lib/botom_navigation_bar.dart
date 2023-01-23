@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:trave_cool/favourites/favorites_screen.dart';
+import 'package:trave_cool/settings/enter_your_email.dart';
+import 'package:trave_cool/settings/forget_password.dart';
+import 'package:trave_cool/settings/new_password.dart';
+import 'package:trave_cool/settings/verfication_code.dart';
 
 import 'Home/home_screen.dart';
 import 'offers/offers_Screen.dart';
@@ -18,6 +22,10 @@ final screens = [
   const OffersScreen(),
   const FavoriteScreen(),
   const SettingScreen(),
+  const EnterEmail(),
+  const ForgetPassword(),
+  const NewPassword(),
+  const VerfiactionCode(),
 ];
 
 List _colors = [

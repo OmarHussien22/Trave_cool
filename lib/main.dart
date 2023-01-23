@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:trave_cool/Service%20Screen/servic_Home.dart';
 import 'package:trave_cool/Home/home_screen.dart';
-
 import 'package:trave_cool/Register/Register_screen.dart';
 import 'package:trave_cool/botom_navigation_bar.dart';
+import 'package:trave_cool/offers/offers_Screen.dart';
 import 'package:trave_cool/settings/new_password.dart';
 import 'package:trave_cool/settings/enter_your_email.dart';
 import 'package:trave_cool/settings/forget_password.dart';
@@ -10,6 +11,7 @@ import 'package:trave_cool/settings/settings.screen.dart';
 
 import 'package:trave_cool/settings/verfication_code.dart';
 
+import 'Most popular/most_popular.dart';
 import 'Login/login_screen.dart';
 
 void main() {
@@ -27,6 +29,9 @@ class TraveCool extends StatelessWidget {
       routes: {
         BottomBar.id: (context) => const BottomBar(),
         HomeScreen.id: (context) => const HomeScreen(),
+        OffersScreen.id: (context) => const OffersScreen(),
+        MostPopularScreen.id: (context) => const MostPopularScreen(),
+        ServiceScreen.id: (context) => const ServiceScreen(),
         LoginScreen.id: (context) => const LoginScreen(),
         RegisterScreen.id: (context) => const RegisterScreen(),
         ForgetPassword.id: (context) => const ForgetPassword(),

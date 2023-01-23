@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trave_cool/settings/enter_your_email.dart';
 import 'package:trave_cool/settings/verfication_code.dart';
+import 'package:trave_cool/widgets/constants.dart';
 
 import 'package:trave_cool/widgets/custom_botton_login.dart';
 
@@ -18,8 +19,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    double _width = 150;
-    double _height = 35;
+    double myWidth = 150;
+    double MyHeight = 35;
     return Scaffold(
       body: SafeArea(
           child: ListView(
@@ -27,10 +28,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
           Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 100, vertical: 25),
-              child: Image.asset(
-                'assets/images/logo/travecool.png',
-                fit: BoxFit.cover,
-              )),
+              child: Image.asset(KLogo, fit: BoxFit.cover)),
           const SizedBox(
             height: 80,
           ),
@@ -41,10 +39,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               height: height * 0.4,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 0.7,
-                  )),
+                  border: Border.all(color: KBlack, width: 0.7)),
               child: Column(
                 children: [
                   Padding(
@@ -56,14 +51,14 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           style: TextStyle(
                               fontSize: 12,
                               fontFamily: 'CooperBlack ',
-                              color: Color(0xff000000),
+                              color: KBlack,
                               fontWeight: FontWeight.bold),
                         )
                       ],
                     ),
                   ),
                   RadioListTile(
-                      activeColor: Colors.black,
+                      activeColor: KBlack,
                       title: const Text(
                         'Enter E-mail Address',
                         style: TextStyle(
@@ -87,15 +82,12 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                         width: 325,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.7,
-                            )),
+                            border: Border.all(color: KBlack, width: 0.7)),
                       ),
                     ),
                   ),
                   RadioListTile(
-                      activeColor: Colors.black,
+                      activeColor: KBlack,
                       title: const Text(
                         'Enter Mobile Number',
                         style: TextStyle(
@@ -118,10 +110,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                         width: 325,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.7,
-                            )),
+                            border: Border.all(color: KBlack, width: 0.7)),
                       ),
                     ),
                   ),
@@ -129,7 +118,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     height: 20,
                   ),
                   CustomElevatedButton(
-                    minimumSize: Size(_width, _height),
+                    minimumSize: Size(myWidth, MyHeight),
                     text: 'Send',
                     ontap: () {
                       Navigator.pushNamed(context, VerfiactionCode.id);

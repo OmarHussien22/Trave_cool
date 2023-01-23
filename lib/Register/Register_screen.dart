@@ -13,8 +13,8 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    double _width = 200;
-    double _height = 50;
+    double width = 200;
+    double height = 50;
 
     return Scaffold(
         body: SafeArea(
@@ -118,7 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 60,
               ),
               CustomElevatedButton(
-                minimumSize: Size(_width, _height),
+                minimumSize: Size(width, height),
                 text: 'Sign UP',
                 ontap: () {
                   Navigator.pop(context);

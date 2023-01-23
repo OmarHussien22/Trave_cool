@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class OffersScreen extends StatefulWidget {
   const OffersScreen({super.key});
-
+  static String id = 'Offers Screen';
   @override
   State<OffersScreen> createState() => _OffersScreenState();
 }

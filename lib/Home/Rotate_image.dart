@@ -52,11 +52,22 @@ class RotateImage extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   Container(
-                    color: Colors.white,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          width: 0.5, color: const Color(0xff7C7C7C)),
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
                     height: 90,
                     width: 125,
-                    child: Image.asset(
-                      'assets/images/logo/Home.jpeg',
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: SizedBox.fromSize(
+                        size: Size.fromRadius(12),
+                        child: Image.asset(
+                          'assets/images/logo/Home.jpeg',
+                        ),
+                      ),
                     ),
                   ),
                   Positioned(
@@ -65,11 +76,22 @@ class RotateImage extends StatelessWidget {
                     child: Transform.rotate(
                       angle: 110 / 180,
                       child: Container(
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                              color: const Color(0xff7C7C7C), width: 0.4),
+                          color: Color(0xffF9F9F9),
+                        ),
                         height: 90,
                         width: 125,
-                        child: Image.asset(
-                          'assets/images/logo/Home2.jpeg',
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: SizedBox.fromSize(
+                            size: Size.fromRadius(12),
+                            child: Image.asset(
+                              'assets/images/logo/Home2.jpeg',
+                            ),
+                          ),
                         ),
                       ),
                     ),

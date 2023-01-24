@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trave_cool/Messages/main_message.dart';
 import 'package:trave_cool/Service%20Screen/servic_Home.dart';
 import 'package:trave_cool/Home/home_screen.dart';
 import 'package:trave_cool/Register/Register_screen.dart';
@@ -32,6 +33,7 @@ class TraveCool extends StatelessWidget {
         OffersScreen.id: (context) => const OffersScreen(),
         MostPopularScreen.id: (context) => const MostPopularScreen(),
         ServiceScreen.id: (context) => const ServiceScreen(),
+        MainMassage.id: (context) => const MainMassage(),
         LoginScreen.id: (context) => const LoginScreen(),
         RegisterScreen.id: (context) => const RegisterScreen(),
         ForgetPassword.id: (context) => const ForgetPassword(),

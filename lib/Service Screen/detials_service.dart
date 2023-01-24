@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trave_cool/Messages/main_message.dart';
 
 class DetailsOfService extends StatelessWidget {
   const DetailsOfService({super.key});
@@ -9,30 +10,32 @@ class DetailsOfService extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Container(
-                width: 350,
-                height: 200.56,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color(0xffD9D9D9),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(1.5, 1.5),
-                    ),
-                  ],
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8), // Image border
-                  child: SizedBox.fromSize(
-                    size: Size.fromRadius(8), // Image radius
-                    child: Image.asset(
-                      'assets/images/logo/image.jpeg',
-                      fit: BoxFit.cover,
-                    ),
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, MainMassage.id),
+              child: Container(
+                  width: 350,
+                  height: 200.56,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0xffD9D9D9),
+                        spreadRadius: 1.5,
+                        offset: Offset(2, 2),
+                      ),
+                    ],
                   ),
-                )),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8), // Image border
+                    child: SizedBox.fromSize(
+                      size: Size.fromRadius(8), // Image radius
+                      child: Image.asset(
+                        'assets/images/logo/image.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )),
+            ),
             Positioned(
                 right: 7.89,
                 top: 7.89,

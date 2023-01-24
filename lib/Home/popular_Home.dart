@@ -26,9 +26,15 @@ class PopularHomeScreen extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 8, right: 10, left: 10),
                   width: 133,
                   height: 123,
-                  child: Image.asset(
-                    'assets/images/logo/imag.jpeg',
-                    fit: BoxFit.fill,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: SizedBox.fromSize(
+                      size: Size.fromRadius(8),
+                      child: Image.asset(
+                        'assets/images/logo/imag.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
                 Positioned(

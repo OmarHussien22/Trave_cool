@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:trave_cool/favourites/details_favourites.dart';
 import 'package:trave_cool/widgets/constants.dart';
 

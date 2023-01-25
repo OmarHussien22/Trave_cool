@@ -22,6 +22,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
     double myWidth = 150;
     double MyHeight = 35;
     return Scaffold(
+      backgroundColor: KBackgroundColor,
       body: SafeArea(
           child: ListView(
         children: [

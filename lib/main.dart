@@ -26,6 +26,7 @@ class TraveCool extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: const Color(0xffF5F5F5),
       debugShowCheckedModeBanner: false,
       routes: {
         BottomBar.id: (context) => const BottomBar(),

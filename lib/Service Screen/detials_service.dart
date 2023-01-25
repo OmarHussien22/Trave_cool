@@ -28,7 +28,7 @@ class DetailsOfService extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8), // Image border
                     child: SizedBox.fromSize(
-                      size: Size.fromRadius(8), // Image radius
+                      size: const Size.fromRadius(8), // Image radius
                       child: Image.asset(
                         'assets/images/logo/image.jpeg',
                         fit: BoxFit.cover,
@@ -37,7 +37,7 @@ class DetailsOfService extends StatelessWidget {
                   )),
             ),
             Positioned(
-                right: 7.89,
+                right: 7.3,
                 top: 7.89,
                 child: Container(
                   decoration: BoxDecoration(
@@ -46,8 +46,8 @@ class DetailsOfService extends StatelessWidget {
                   ),
                   width: 16,
                   height: 16,
-                  child:
-                      const Icon(Icons.favorite, color: Colors.black, size: 10),
+                  child: const Icon(Icons.favorite_border_rounded,
+                      color: Colors.black, size: 10),
                 )),
           ],
         ),

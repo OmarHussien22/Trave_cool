@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:trave_cool/settings/settings.screen.dart';
+import 'package:trave_cool/widgets/constants.dart';
 
 import 'package:trave_cool/widgets/custom_form_field.dart';
 import '../widgets/custom_botton_login.dart';
@@ -17,6 +18,7 @@ class NewPassword extends StatelessWidget {
     double _width = 150;
     double _height = 35;
     return Scaffold(
+      backgroundColor: KBackgroundColor,
       body: SafeArea(
           child: ListView(
         children: [

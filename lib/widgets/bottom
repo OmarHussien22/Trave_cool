@@ -1,0 +1,85 @@
+
+class BottomBar extends StatefulWidget {
+  const BottomBar({super.key});
+  static String id = 'BottomNavigationBar';
+  @override
+  State<BottomBar> createState() => _BottomBarState();
+}
+
+int currentIndex = 0;
+final screens = [
+  const HomeScreen(),
+  const OffersScreen(),
+  const FavoriteScreen(),
+  const SettingScreen(),
+  const EnterEmail(),
+  const ForgetPassword(),
+  const NewPassword(),
+  const VerfiactionCode(),
+];
+
+List _colors = [
+  Colors.red,
+  Colors.red,
+  Colors.red,
+  Colors.red,
+];
+
+class _BottomBarState extends State<BottomBar> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: screens[currentIndex],
+        bottomNavigationBar: NavigationBarTheme(
+          data: NavigationBarThemeData(
+              backgroundColor: Colors.black,
+              indicatorColor: _colors[currentIndex],
+              labelTextStyle: MaterialStateProperty.all(const TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: 'OrelegaOne'))),
+          child: NavigationBar(
+              height: 50,
+              onDestinationSelected: (index) {
+                setState(() {
+                  currentIndex = index;
+                });
+              },
+              destinations: const [
+                NavigationDestination(
+                    icon: Icon(
+                      Icons.home,
+                      color: Colors.white,
+                    ),
+                    selectedIcon: Icon(Icons.home),
+                    label: 'Home'),
+                NavigationDestination(
+                    icon: Icon(
+                      Icons.local_offer,
+                      color: Colors.white,
+                    ),
+                    selectedIcon: Icon(Icons.local_offer),
+                    label: 'offers'),
+                NavigationDestination(
+                    icon: Icon(
+                      Icons.favorite,
+                      color: Colors.white,
+                    ),
+                    selectedIcon: Icon(Icons.favorite),
+                    label: 'favorites'),
+                NavigationDestination(
+                  icon: Icon(
+                    Icons.settings,
+                    color: Colors.white,
+                  ),
+                  selectedIcon: Icon(
+                    Icons.settings,
+                    color: Colors.white,
+                  ),
+                  label: 'settings',
+                )
+              ]),
+        ));
+  }
+}

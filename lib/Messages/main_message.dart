@@ -13,7 +13,7 @@ class _MainMassageState extends State<MainMassage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF5F5F5),
+      backgroundColor: KBackgroundColor,
       body: ListView(
         children: [
           Padding(

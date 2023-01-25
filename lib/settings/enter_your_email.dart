@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:trave_cool/settings/verfication_code.dart';
+import 'package:trave_cool/widgets/constants.dart';
 import 'package:trave_cool/widgets/custom_form_field.dart';
 
 import '../widgets/custom_botton_login.dart';
@@ -15,7 +16,7 @@ class EnterEmail extends StatelessWidget {
     double _width = 150;
     double _height = 35;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: KBackgroundColor,
       body: ListView(
         children: [
           Row(

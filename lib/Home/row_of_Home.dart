@@ -4,9 +4,14 @@ import '../offers/offers_Screen.dart';
 import '../widgets/constants.dart';
 
 class CustomRowHome extends StatelessWidget {
-  CustomRowHome({super.key, required this.text, required this.towText});
+  CustomRowHome(
+      {super.key,
+      required this.text,
+      required this.towText,
+      required this.ontap});
   String text;
   String towText;
+  VoidCallback? ontap;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +25,7 @@ class CustomRowHome extends StatelessWidget {
                 fontSize: 14, fontFamily: 'OrelegaOne', color: kPrimaryColor),
           ),
           GestureDetector(
-            onTap: () => Navigator.pushNamed(context, OffersScreen.id),
+            onTap: ontap,
             child: Text(
               towText,
               style: const TextStyle(

@@ -14,9 +14,10 @@ class DetailsFavourites extends StatelessWidget {
             height: 100,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color(0xffAFACAC), width: 0.4),
                 gradient: LinearGradient(colors: [
-                  Color(0xffF8F8F8).withOpacity(0.8),
-                  Color(0xffAFACAC).withOpacity(0.2),
+                  const Color(0xffF8F8F8).withOpacity(0.2),
+                  const Color(0xffAFACAC).withOpacity(0.1),
                 ])),
             child: Row(
               children: [
@@ -87,7 +88,7 @@ class DetailsFavourites extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(bottom: 16.33),
+                            padding: EdgeInsets.only(bottom: 15.33),
                             child: Text(
                               '4.8',
                               style: TextStyle(

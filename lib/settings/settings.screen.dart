@@ -11,6 +11,7 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: KBackgroundColor,
       body: Padding(
           padding: const EdgeInsets.only(top: 43, left: 8),
           child: ListView(

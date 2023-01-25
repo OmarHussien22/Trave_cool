@@ -5,9 +5,11 @@ import 'package:trave_cool/Home/container_of_home.dart';
 import 'package:trave_cool/Home/hotel_home.dart';
 import 'package:trave_cool/Home/popular_Home.dart';
 import 'package:trave_cool/Home/row_of_Home.dart';
+import 'package:trave_cool/botom_navigation_bar.dart';
 import 'package:trave_cool/widgets/constants.dart';
 
 import '../Most popular/most_popular.dart';
+import '../offers/offers_Screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: KBackgroundColor,
       body: SafeArea(
         child: ListView(children: [
           const RotateImage(),
@@ -41,9 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     return const HomeHotel();
                   })),
           CustomRowHome(
-            text: 'Best Offers',
-            towText: 'View more',
-          ),
+              text: 'Best Offers',
+              towText: 'View more',
+              ontap: () => Navigator.pushNamed(context, OffersScreen.id)),
           const SizedBox(
             height: 11,
           ),
@@ -53,11 +56,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return const Best();
+                  return Best();
                 }),
           ),
           const CustomOfHome(),
-          CustomRowHome(text: 'Most Popular', towText: 'View more'),
+          CustomRowHome(
+            text: 'Most Popular',
+            towText: 'View more',
+            ontap: () => Navigator.pushNamed(context, MostPopularScreen.id,
+                arguments: BottomBar()),
+          ),
           const SizedBox(
             height: 11,
           ),

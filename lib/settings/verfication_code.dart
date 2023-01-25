@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
 import 'package:trave_cool/settings/new_password.dart';
+import 'package:trave_cool/widgets/constants.dart';
 import 'package:trave_cool/widgets/custom_botton_login.dart';
 
 class VerfiactionCode extends StatelessWidget {
@@ -14,7 +15,7 @@ class VerfiactionCode extends StatelessWidget {
     double _width = 150;
     double _height = 35;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: KBackgroundColor,
       body: SafeArea(
           child: ListView(
         children: [

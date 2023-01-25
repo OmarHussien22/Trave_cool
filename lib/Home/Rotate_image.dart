@@ -80,14 +80,14 @@ class RotateImage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
                               color: const Color(0xff7C7C7C), width: 0.4),
-                          color: Color(0xffF9F9F9),
+                          color: const Color(0xffF9F9F9),
                         ),
                         height: 90,
                         width: 125,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: SizedBox.fromSize(
-                            size: Size.fromRadius(12),
+                            size: const Size.fromRadius(12),
                             child: Image.asset(
                               'assets/images/logo/Home2.jpeg',
                             ),
